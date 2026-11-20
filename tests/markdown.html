@@ -1,0 +1,27 @@
+<!doctype html>
+<html dir="rtl" lang="fa">
+<meta charset="utf-8">
+<title>نمونهٔ کد در متن Markdown</title>
+<style>
+  html { font: 16px/1.6 sans-serif; }
+  main { width: 520px; }
+  pre, .source { margin: 0; font: 16px/24px monospace; white-space: pre; }
+  .scroll { width: 340px; overflow-x: auto; }
+  .scroll pre { width: max-content; min-width: 100%; }
+  .line { display: block; }
+  .line, .token, code { direction: rtl; text-align: right; unicode-bidi: plaintext; }
+  #codeToolbar { direction: rtl; text-align: right; }
+</style>
+<main class="markdown">
+  <p id="paragraph">برای تغییر رنگ، دستور <code id="inline"><span class="token">Color.Blue</span></code> را اجرا کن.</p>
+  <p id="english">Compare the two examples.</p>
+  <div class="scroll" id="codeViewport"><div><pre id="listing"><code><span id="first" class="line"><span class="token">modifier = Modifier</span></span><span id="second" class="line">    <span id="call" class="token">.padding(all = 16.dp)</span>  <span id="comment" dir="auto">// ابتدا فاصله ایجاد می‌شود</span></span><span id="third" class="line">    .background(Color.Green)</span><span id="fourth" class="line"><span id="fullComment" dir="rtl">// توضیح فارسی</span></span><span id="fifth" class="line">    Text("حالت اول", modifier = Modifier)</span></code></pre></div></div>
+  <div class="scroll" id="articleScroll"><p>توضیح نمونه</p><pre>pass()</pre></div>
+  <div class="scroll" id="anonymousScroll"><div class="source" id="anonymous">modifier = Modifier
+    .padding(all = 16.dp)  // ابتدا فاصله ایجاد می‌شود</div></div>
+  <div class="source" id="monoProse">این یک متن معمولی فارسی است.</div>
+  <div id="custom" class="code-block"><div id="codeToolbar" role="toolbar"><button>کپی کد</button></div><div class="line" id="customLine">// توضیح فارسی</div></div>
+  <div class="scroll" id="lateViewport"><div id="late"><span id="lateLine" class="line">توضیح فارسی</span></div></div>
+  <div contenteditable="true"><pre id="editor">در حال ویرایش</pre></div>
+</main>
+</html>

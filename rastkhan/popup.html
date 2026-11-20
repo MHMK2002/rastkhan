@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>راست‌خوان</title>
+  <link rel="stylesheet" href="popup.css">
+  <script defer src="popup.js"></script>
+</head>
+<body>
+  <header>
+    <img src="icons/48.png" width="40" height="40" alt="">
+    <h1>راست‌خوان</h1>
+    <label class="power">
+      <input type="checkbox" id="enabled" role="switch" aria-label="فعال بودن راست‌خوان" disabled>
+      <span class="track" aria-hidden="true"></span>
+      <span id="status"></span>
+    </label>
+  </header>
+  <main>
+    <fieldset id="modes" disabled>
+      <legend>جهت خواندن</legend>
+      <div class="choices">
+        <label class="choice">
+          <input type="radio" name="mode" value="auto">
+          <span><b>تشخیص خودکار</b><small>جهت هر بند بر اساس زبان متن</small></span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="mode" value="rtl">
+          <span><b>همیشه راست‌به‌چپ</b><small>شروع همهٔ بندها از سمت راست</small></span>
+        </label>
+      </div>
+    </fieldset>
+    <section aria-labelledby="preview-heading">
+      <h2 id="preview-heading">پیش‌نمایش</h2>
+      <div class="sample" id="sample">
+        <p lang="fa" dir="rtl">دستور <code dir="ltr">git status</code> را اجرا کن.</p>
+        <p lang="en" dir="ltr" id="english">Check the output.</p>
+      </div>
+    </section>
+    <p id="error" role="alert" hidden></p>
+  </main>
+</body>
+</html>

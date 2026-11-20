@@ -1,0 +1,30 @@
+:root[data-rastkhan-active] [data-rastkhan-dir^="rtl"] {
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+}
+:root[data-rastkhan-active] [data-rastkhan-dir^="ltr"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+:root[data-rastkhan-active] [data-rastkhan-dir$="-lines"] {
+  unicode-bidi: plaintext !important;
+}
+:root[data-rastkhan-active] [data-rastkhan-align] {
+  text-align: start !important;
+}
+
+:root[data-rastkhan-active] :is([data-rastkhan-dir="code"], [data-rastkhan-dir="code-scroll"]) {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+}
+
+/* Highlighted tokens share one LTR line. Persian letters within comments and
+   string literals still follow the browser's Unicode bidirectional algorithm. */
+@scope (:root[data-rastkhan-active]) to (button, input, select, textarea, [role="button"], [role="toolbar"], [role="textbox"], [contenteditable]:not([contenteditable="false" i]), .cm-editor, .CodeMirror, .monaco-editor, .ace_editor, .xterm) {
+  :scope[data-rastkhan-active] [data-rastkhan-dir="code"] * {
+    direction: ltr !important;
+    text-align: left !important;
+    unicode-bidi: normal !important;
+  }
+}
